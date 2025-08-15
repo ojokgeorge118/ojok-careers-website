@@ -3,69 +3,47 @@
 <html>
     <head>
         <title>Ojok Careers </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
         <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                padding: 50px;
-            }
-            h1 {
-                font-size: 36px;
-                font-family: 'Arial', sans-serif;
-                font-weight:normal;
-                color: rgb(0,0,0);
-                text-align: right;
-            }
-            
             #banner{
                 width: 100%;
                 height: 250px;
                 object-fit: cover;
                 margin: 0 auto;
-                
             }
-            h2{
-                font-family: 'Arial', sans-serif;
-                font-weight:normal;
-                color: rgb(0,0,0);
-                text-align: center;
-                font-size: 24px;
-                
-            }
-            p{
-                font-family: 'Arial', sans-serif;
-                font-weight:normal;
-                color: rgb(0,0,0);
-                text-align: center;
-                font-size: 16px;
-                margin: 20px 0;
-            }
-            #container{
-                max-width: 720px;
-                margin: 0 auto;
-            }
-            
         </style>
         
     </head> 
   
     <body>
-        <div id="container">
-        <h1>Ojok Careers </h1>
-        <img id="banner" src="https://05ee274b-a11d-4040-9945-c483e33fe46b-00-5m7oho97qv5g.riker.replit.dev/static/banner.jpg" alt="Ojok Careers">
-        <h2>About Ojok Careers </h2>
-        <p>Ojok Careers is a platform that connects job seekers with employers. We help job seekers find their dream             jobs and help employers find the best talent.</p>
-        <p>We are a team of passionate people who believe in the power of technology to change the world. We are                 committed to building a platform that is easy to use, reliable, and secure.</p>
-        <p>We are always looking for talented people to join our team. If you are interested in joining us, please               send us an email at <a href="mailto:ojokcareers@gmail.com">ojokcareers@gmail.com</a></p>
-        <p>Thank you for visiting Ojok Careers </p>
-        <p>Best regards,</p>
-
-        <h2>Open Position</h2>
-        <p>We are currently hiring for the following positions:</p>
-            <button>Contact Us </button>
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">{{company_name}} Careers </h1>
+            <img class="img-fluid" id="banner" src="https://05ee274b-a11d-4040-9945-c483e33fe46b-00-5m7oho97qv5g.riker.replit.dev/static/banner.jpg" alt="Ojok Careers">
+            <h2 class="text-center mt-2 mb-4">About Ojok Careers </h2>
+            <p>Ojok Careers is a platform that connects job seekers with employers. We help job seekers find their dream jobs and help employers find the best talent.</p>
+            <p>We are a team of passionate people who believe in the power of technology to change the world. We are committed to building a platform that is easy to use, reliable, and secure.</p>
+            <p>We are always looking for talented people to join our team. If you are interested in joining us, please send us an email at <a href="mailto:ojokcareers@gmail.com">ojokcareers@gmail.com</a></p>
+            <p>Thank you for visiting Ojok Careers </p>
+            <p>Best regards,</p>
+    
+            <h2 class="text-center">Open Position</h2>
+            <p class="text-center">We are currently hiring for the following positions:</p>
+            <div>
+                {%for job in jobs %}
+                  {%include 'jobitem.html'%}
+                {% endfor %}
             </div>
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg mt-4">Contact Us </button>
+                <p class="mt-4">CopyRight 2025 Ojok George</p>
+            </div>
+        </div>
     </body>
+    
     <footer>
-        <p>Footer</p>
+       
     </footer>  
 </html>
